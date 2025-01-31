@@ -17,16 +17,20 @@
             height: 80vh;
         }
 
-        .trendingSection{
+        .fa-bars {
+            display: none;
+        }
+
+        .trendingSection {
             background-color: #FFF9F4;
             margin-top: 80px;
             padding-top: 25px;
             padding-bottom: 55px;
         }
 
-        .newsLetterSection{
-            left:0px;
-            right:0px;
+        .newsLetterSection {
+            left: 0px;
+            right: 0px;
         }
 
 
@@ -35,30 +39,39 @@
                 height: 65vh;
             }
 
-            .navbar-start .dropdown{
+            .navbar-start .dropdown {
                 display: none;
             }
 
-            .navbar-end .btn{
-                display: none;
-            }
-            .supporttingText{
+            .navbar-end .btn {
                 display: none;
             }
 
-            .price{
+            .fa-bars {
+                display: inline;
+            }
+
+            .notification,
+            .search {
+                display: none;
+            }
+
+
+            .supporttingText {
+                display: none;
+            }
+
+            .price {
                 color: #ffffff;
             }
 
         }
 
-        @media screen and (max-width:778px){
-            footer .customFooter{
+        @media screen and (max-width:778px) {
+            footer .customFooter {
                 padding-top: 580px;
             }
         }
-
-
     </style>
 </head>
 
@@ -94,10 +107,11 @@
                         </ul>
                     </div>
                     <div class="navbar-end gap-4">
-                        <i class="fa-solid fa-bell"></i>
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-bell notification"></i>
+                        <i class="fa-solid fa-magnifying-glass search"></i>
                         <a class="btn bg-white border-1 border-yellow-300">Login</a>
                         <a class="btn bg-yellow-300">Register</a>
+                        <i class="fa-solid fa-bars"></i>
                     </div>
                 </div>
             </div>
@@ -342,7 +356,9 @@
                         <h1 class="font-bold text-2xl pt-4">T-Shirt for Dogs</h1>
                     </div>
                     <div class="flex justify-between pt-6">
-                        <div><h1 class="font-bold text-4xl text-yellow-300">$7.99</h1></div>
+                        <div>
+                            <h1 class="font-bold text-4xl text-yellow-300">$7.99</h1>
+                        </div>
                         <div><img src="c1-assets/cute-pet-mid.png" alt="dog" class="w-[220px]"></div>
                     </div>
                 </div>
@@ -352,9 +368,9 @@
         <div class="newsLetterSection container absolute mx-auto px-3 pt-10 -mt-[120px] lg:px-20">
             <div class="flex flex-col items-center justify-center gap-4 mt-10 rounded-lg bg-yellow-50 md:flex-row">
                 <div class="w-full flex items-center justify-center md:w-1/3">
-                        <div class="p-6">
-                            <img src="c1-assets/cute-pet-mid.png" alt="dog" class="w-[220px]">
-                        </div>
+                    <div class="p-6">
+                        <img src="c1-assets/cute-pet-mid.png" alt="dog" class="w-[220px]">
+                    </div>
                 </div>
                 <div class="w-full text-center p-6 md:w-2/3 md:text-left">
                     <div class="pt-6 space-y-6">
@@ -371,33 +387,33 @@
 
     <footer class="bg-[#FFDC2680]">
         <div class="customFooter container mx-auto px-3 pt-[250px] mt-[250px] pb-[80px] lg:px-20">
-            <footer class="footer items-end">
+            <footer class="footer items-end justify-between">
                 <nav>
-                  <h1 class="font-bold text-3xl">Browse4Pets</h1>
-                  <p>Discover a world of treats, toys, and <br> essentials handpicked for your furry <br> friends</p>
+                    <h1 class="font-bold text-3xl">Browse4Pets</h1>
+                    <p>Discover a world of treats, toys, and <br> essentials handpicked for your furry <br> friends</p>
                 </nav>
                 <nav>
-                  <a class="link link-hover">Find a pet</a>
-                  <a class="link link-hover">Breeds</a>
-                  <a class="link link-hover">Contact us</a>
+                    <a class="link link-hover">Find a pet</a>
+                    <a class="link link-hover">Breeds</a>
+                    <a class="link link-hover">Contact us</a>
                 </nav>
                 <nav>
-                  <h6 class="footer-title">Follow us</h6>
-                  <div class="grid grid-flow-col gap-4">
-                    <a>
-                        <i class="fa-brands fa-2x fa-facebook-f"></i>
-                    </a>
-                    <a>
-                        <i class="fa-brands fa-2x fa-youtube"></i>
-                    </a>
-                    <a>
-                        <i class="fa-brands fa-2x fa-twitter"></i>
-                    </a>
+                    <h6 class="footer-title">Follow us</h6>
+                    <div class="grid grid-flow-col gap-4">
+                        <a>
+                            <i class="fa-brands fa-2x fa-facebook-f"></i>
+                        </a>
+                        <a>
+                            <i class="fa-brands fa-2x fa-youtube"></i>
+                        </a>
+                        <a>
+                            <i class="fa-brands fa-2x fa-twitter"></i>
+                        </a>
 
-                    <a href="#"><i class="fa-brands fa-2x fa-linkedin-in"></i></a>
-                  </div>
+                        <a href="#"><i class="fa-brands fa-2x fa-linkedin-in"></i></a>
+                    </div>
                 </nav>
-              </footer>
+            </footer>
         </div>
 
     </footer>
