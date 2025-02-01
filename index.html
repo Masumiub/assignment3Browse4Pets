@@ -79,17 +79,39 @@
             animation-direction: alternate;
         }
 
+        .customBtn{
+            animation-duration: 1s;
+            animation-name: ColorChangingBtn;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
         @keyframes upDown {
             from {
                 top: 0px;
-                background-color: #FFF9F4;
+                background-color: #fffae3;
             }
 
             to {
                 top: 25px;
-                background-color: #fff7bb;
+                background-color: #fcf2ab;
             }
         }
+
+        @keyframes ColorChangingBtn {
+            from {
+                color:#000000;
+                background-color: #fefae7;
+            }
+
+            to {
+                color:#000000;
+                background-color: #FFDC26;
+            }
+        }
+
+
 
 
         @media screen and (max-width:576px) {
@@ -136,7 +158,12 @@
             footer .customFooter {
                 padding-top: 580px;
             }
+
+            #lastCard{
+                display: none;
+            }
         }
+
     </style>
 </head>
 
@@ -176,7 +203,7 @@
                         <i class="fa-solid fa-bell notification"></i>
                         <i class="fa-solid fa-magnifying-glass search"></i>
                         <a class="btn bg-white border-1 border-yellow-300 shadow-none px-7">Login</a>
-                        <a class="btn bg-yellow-300 shadow-none px-7">Register</a>
+                        <a class="btn bg-yellow-300 shadow-none px-7 border-none">Register</a>
                         <i class="fa-solid fa-bars"></i>
                     </div>
                 </div>
@@ -194,7 +221,7 @@
                             essentials handpicked
                             for your furry friends. Shop now and make tails wag with joy!
                         </p>
-                        <button class="btn bg-yellow-300 sora-regular shadow-none px-7">Find a pet</button>
+                        <button class="btn bg-yellow-300 sora-regular shadow-none px-7 border-none customBtn">Find a pet</button>
                     </div>
 
                     <div class="w-full md:w-1/2">
@@ -220,14 +247,14 @@
             </div>
 
             <div class="sora-regular grid grid-cols-2 gap-3 mt-10 md:grid-cols-6 gap-4">
-                <div class="cardsm rounded-lg text-center bg-yellow-300 px-3 pt-10 pb-9 space-y-2">
+                <div class="cardsm rounded-lg text-center bg-[#F9DF8A] px-3 pt-10 pb-9 space-y-2">
                     <div class="flex justify-center">
                         <img src="c1-assets/dog-cartoon.png" alt="dog" class="bg-white rounded-full p-4">
                     </div>
                     <h4 class="font-bold">Dog</h4>
                     <p>3 items</p>
                 </div>
-                <div class="cardsm rounded-lg text-center bg-yellow-300 px-3 pt-10 pb-9 space-y-2">
+                <div class="cardsm rounded-lg text-center bg-[#F9DF8A] px-3 pt-10 pb-9 space-y-2">
                     <div class="flex justify-center">
                         <img src="c1-assets/rabbit-cartoon.png" alt="dog" class="bg-white rounded-full p-4">
                     </div>
@@ -236,7 +263,7 @@
                 </div>
 
 
-                <div class="cardsm rounded-lg text-center bg-yellow-300 px-3 pt-10 pb-9 space-y-2">
+                <div class="cardsm rounded-lg text-center bg-[#F9DF8A] px-3 pt-10 pb-9 space-y-2">
                     <div class="flex justify-center">
                         <img src="c1-assets/fish-cartoon.png" alt="dog" class="bg-white rounded-full p-4">
                     </div>
@@ -245,7 +272,7 @@
                 </div>
 
 
-                <div class="cardsm rounded-lg text-center bg-yellow-300 px-3 pt-10 pb-9 space-y-2">
+                <div class="cardsm rounded-lg text-center bg-[#F9DF8A] px-3 pt-10 pb-9 space-y-2">
                     <div class="flex justify-center">
                         <img src="c1-assets/cat-cartoon.png" alt="dog" class="bg-white rounded-full p-4">
                     </div>
@@ -253,7 +280,7 @@
                     <p>3 items</p>
                 </div>
 
-                <div class="cardsm rounded-lg text-center bg-yellow-300 px-3 pt-10 pb-9 space-y-2">
+                <div class="cardsm rounded-lg text-center bg-[#F9DF8A] px-3 pt-10 pb-9 space-y-2">
                     <div class="flex justify-center">
                         <img src="c1-assets/bird-cartoon.png" alt="dog" class="bg-white rounded-full p-4">
                     </div>
@@ -261,7 +288,7 @@
                     <p>3 items</p>
                 </div>
 
-                <div class="cardsm rounded-lg text-center bg-yellow-300 px-3 pt-10 pb-9 space-y-2">
+                <div class="cardsm rounded-lg text-center bg-[#F9DF8A] px-3 pt-10 pb-9 space-y-2">
                     <div class="flex justify-center">
                         <img src="c1-assets/mouse-cartoon.png" alt="dog" class="bg-white rounded-full p-5">
                     </div>
@@ -282,11 +309,32 @@
                     </div>
                     <p class="leading-[30px]">Explore heartwarming tales of pets and their journeys. From rescues to happy adoptions, get inspired by the amazing bond between humans and their furry friends.
                         Share your story with us and become part of our growing community of pet lovers!</p>
-                    <button class="btn bg-yellow-300 sora-regular shadow-none px-7">Submit Your Story</button>
+                    <button class="btn bg-yellow-300 sora-regular shadow-none px-7 border-none">Submit Your Story</button>
                 </div>
 
                 <div>
-                    <img src="c1-assets/PetStory.jpg" alt="story" class="w-full rounded-lg">
+                    <!-- <img src="c1-assets/PetStory.jpg" alt="story" class="w-full rounded-lg"> -->
+                    <div class="carousel w-full">
+                        <div id="slide1" class="carousel-item relative w-full">
+                          <img
+                            src="c1-assets/PetStory.jpg"
+                            class="w-full rounded-lg" />
+                          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                            <a href="#slide2" class="btn btn-circle">❮</a>
+                            <a href="#slide2" class="btn btn-circle">❯</a>
+                          </div>
+                        </div>
+                        <div id="slide2" class="carousel-item relative w-full">
+                          <img
+                            src="https://ultra-pet.co.za/wp-content/uploads/2020/08/socialising-800x630.jpg"
+                            class="w-full" />
+                          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                            <a href="#slide1" class="btn btn-circle">❮</a>
+                            <a href="#slide1" class="btn btn-circle">❯</a>
+                          </div>
+                        </div>
+                      
+                      </div>
                 </div>
             </div>
         </div>
@@ -421,7 +469,7 @@
                             </div>
 
                             <div
-                                class="bg-white border-2 border-gray-100 p-3 flex items-center rounded-lg gap-3 cardPet">
+                                class="bg-white border-2 border-gray-100 p-3 flex items-center rounded-lg gap-3 cardPet" id="lastCard">
                                 <div class="bg-orange-100 p-2 rounded-lg">
                                     <img src="c1-assets/rabbit-cartoon.png" alt="dog">
                                 </div>
@@ -481,13 +529,13 @@
                     </div>
                 </div>
                 <div class="w-full text-center p-6 md:w-2/3 md:text-left">
-                    <div class="pt-6 space-y-6">
+                    <div class="space-y-6">
                         <h1 class="text-2xl color-yellow-300 adlam-display-regular">Get Pawsome News!</h1>
                         <p class="sora-regular">Exclusive training tips, ticks, products deals and more</p>
                         <input type="email" placeholder="Enter email"
                             class="input input-bordered w-full max-w-xs sora-regular" />
                         <br>
-                        <button class="btn bg-yellow-300 sora-regular">Subscribe</button>
+                        <button class="btn bg-yellow-300 sora-regular border-none px-8">Subscribe</button>
                     </div>
                 </div>
             </div>
